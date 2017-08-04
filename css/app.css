@@ -1,0 +1,471 @@
+/* Manifest ------------ */
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+body {
+  min-width: 320px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.parallax {
+  min-height: 1000px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover; }
+
+.container {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 1000; }
+
+.affix + .container-fluid {
+  padding-top: 70px; }
+
+#affix-navbar {
+  height: 525px;
+  margin-top: 20px; }
+
+.container {
+  padding-top: 110px; }
+
+.blog-navigation ul {
+  display: -webkit-inline-box;
+  padding: 10px; }
+
+.blog-navigation li {
+  padding-right: 5px;
+  padding-left: 5px;
+  list-style: none; }
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.slick-slide img {
+  width: 100%; }
+
+.parallax {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover; }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%; } }
+
+.contact-button {
+  text-align: center; }
+
+.contact-form {
+  max-width: 400px;
+  width: 100%;
+  padding-top: 0px;
+  margin: 0 auto;
+  position: relative; }
+  .contact-form .error {
+    color: red; }
+  .contact-form .success {
+    color: #ff9966;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px; }
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] {
+  font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px; }
+
+#contact h3 {
+  color: #F96;
+  display: block;
+  font-size: 30px;
+  font-weight: 400; }
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px; }
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%; }
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+  width: 100%;
+  border: 1px solid #CCC;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px; }
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #AAA; }
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none; }
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #0CF;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px; }
+
+#contact button[type="submit"]:hover {
+  background: #09C;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out; }
+
+#contact button[type="submit"]:active {
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+  outline: 0;
+  border: 1px solid #999; }
+
+::-webkit-input-placeholder {
+  color: #888; }
+
+:-moz-placeholder {
+  color: #888; }
+
+::-moz-placeholder {
+  color: #888; }
+
+:-ms-input-placeholder {
+  color: #888; }
+
+.social-icons {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 10px; }
+  .social-icons h3 {
+    padding-top: 3px;
+    padding-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+    .social-icons h3 p {
+      margin: 1px 0px -1px; }
+
+.navbar
+.navbar-nav {
+  display: inline-block;
+  float: none; }
+
+.navbar {
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px; }
+
+.navbar
+.navbar-collapse {
+  text-align: center; }
+
+.navbar-collapse ul {
+  text-align: center; }
+
+.navbar-inverse {
+  background-color: #373D3F;
+  border-color: #1F2324;
+  -webkit-box-shadow: 2px 2px 25px #000;
+     -moz-box-shadow: 2px 2px 25px #000;
+          box-shadow: 2px 2px 25px #000; }
+
+.nav .nav-item a {
+  font-size: 20px; }
+
+.nav li {
+  padding-top: 5px; }
+
+.navbar-inverse
+.navbar-nav > li > a {
+  color: #f5f5f5;
+  font-size: 30px;
+  position: relative;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.navbar-nav > li > a {
+  padding-top: 11px;
+  padding-bottom: 11px; }
+
+.sub-menu li {
+  margin-bottom: 10px;
+  list-style: none; }
+
+.sub-menu li:last-child {
+  margin-bottom: 0; }
+
+.sub-menu a {
+  color: #999;
+  text-decoration: none; }
+
+.sub-menu a:hover {
+  color: #fff; }
+
+.navbar-inverse,
+.navbar-toggle,
+.navbar-toggle,
+.collapse {
+  margin-bottom: -50px; }
+
+#navbar ul li a {
+  color: #fff;
+  font-size: 1em;
+  padding-left: 4em; }
+
+#menu-menu-1 li a:hover {
+  color: #888; }
+
+/* Helper Classes ------------------------ */
+@media (max-width: 767px) {
+  .navbar
+.navbar-nav {
+    display: block;
+    float: none;
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: center; }
+  .sub-menu {
+    display: none;
+    position: absolute;
+    background: #9d9d9d;
+    padding: 10px 15px;
+    width: 200px; }
+  li:hover .sub-menu {
+    display: block; }
+  .logo h1 {
+    font-size: 35px;
+    margin-top: 8px;
+    margin-left: 10px; } }
+
+footer {
+  background-color: #5E5D57;
+  padding: 2em; }
+
+.footer-h1 {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+.copyright p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  color: #000;
+  margin: 0px; }
+
+.sidebar {
+  background-color: #3F4441; }
+
+.twitter-feed {
+  margin-left: 7em;
+  padding: 10px; }
+
+.fb-feed {
+  margin-left: 3em;
+  padding: 10px; }
+
+.inner-wrapper {
+  background-color: #676D70; }
+
+.instagram-feed {
+  margin-top: -5em; }
+
+.blog-content {
+  padding-left: 30px;
+  padding-right: 30px; }
+  .blog-content h5, .blog-content p {
+    color: #fff; }
+  .blog-content a {
+    color: #4996BB; }
+
+.section-five .row {
+  padding: 10px;
+  background-color: #373A3B; }
+  .section-five .row img {
+    height: 75px;
+    width: 75px; }
+  .section-five .row p {
+    color: #fff; }
+
+.section-seven {
+  -webkit-box-shadow: 2px 3px 13px #000;
+     -moz-box-shadow: 2px 3px 13px #000;
+          box-shadow: 2px 3px 13px #000; }
+
+.section-seven .col-md-12 h1 {
+  text-align: center;
+  color: #fff; }
+
+.tour-date-titles {
+  border-bottom: solid 2px; }
+  .tour-date-titles .col-md-4 {
+    font-size: 30px;
+    font-weight: bold; }
+  .tour-date-titles h2 {
+    color: #fff; }
+
+.tour-date-fields .col-md-3 {
+  margin-top: 10px; }
+
+.tour-date-fields p {
+  color: #fff; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%; } }
+
+@media (max-width: 1005px) {
+  .inner-wrapper {
+    height: 100%;
+    padding-top: 21px; }
+  .section-six {
+    padding-top: 0px; }
+  .tour-dates-title h1 {
+    margin-top: 0px;
+    padding-top: 10px; }
+  .tour-date-titles, .col-md-4 {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 100%; }
+    .tour-date-titles h2, .col-md-4 h2 {
+      font-size: 25px; }
+  .tour-date-fields {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 100%; }
+    .tour-date-fields p {
+      font-size: 11px; } }
+
+.about-content h2 {
+  font-size: 40px;
+  text-align: center;
+  color: #fff; }
+
+.about-content p {
+  color: #fff;
+  font-size: 30px; }
+
+/*# sourceMappingURL=app.css.map */
