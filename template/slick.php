@@ -1,4 +1,4 @@
-<?php $images = get_field( 'header_slider', 13 ); ?>
+<?php $images = get_field( 'header_slider', 'option' ); ?>
 
 <?php if( $images ): ?>
 
