@@ -68,9 +68,9 @@
 
 				<div class="social-icons">
 
-					<h3><?php the_field( 'social_icon_image', 170 ); ?></h3>
+					<h3><?php the_field( 'twitter_icon', 'option' ); ?></h3>
 
-					<h3><?php the_field( 'social_icon_image', 171 ); ?></h3>
+					<h3><?php the_field( 'facebook_icon', 'option' ); ?></h3>
 
 				</div><!-- end social-icons -->
 

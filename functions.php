@@ -6,8 +6,9 @@
 //Require included files
 require_once STYLESHEETPATH . '/includes/mbc-theme-class.php';
 require_once STYLESHEETPATH . '/includes/post-types.php';
+require_once STYLESHEETPATH . '/includes/front-page-hooks.php';
+require_once STYLESHEETPATH . '/includes/band-member-hooks.php';
 require_once STYLESHEETPATH . '/includes/mbc-hooks.php';
-require_once STYLESHEETPATH . '/includes/home-page-hooks.php';
 
 /**
  * Load theme styles and scripts
@@ -26,7 +27,6 @@ global $wp_scripts;
 	$wp_scripts->add_data ( 'html5_shiv',    'conditional', 'lt IE 9' );
 	$wp_scripts->add_data ( 'respond_js',    'conditional', 'lt IE 9' );
 	wp_enqueue_script     ( 'bootstrap_js',  get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
-	wp_enqueue_script     ( 'facebook_init_js',  get_template_directory_uri() . '/js/facebook-init.js', array('jquery'), '', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'mbc_scripts' );
@@ -41,6 +41,21 @@ function themeprefix_slick_enqueue_scripts_styles() {
  wp_enqueue_style( 'slickcss', get_stylesheet_directory_uri() . '/css/slick.css', '1.6.0', 'all');
  wp_enqueue_style( 'slickcsstheme', get_stylesheet_directory_uri(). '/css/slick-theme.css', '1.6.0', 'all');
 }
+
+/**
+ * Add background color option to customizer
+ */
+$defaults = array(
+	'default-color'          => '',
+	'default-image'          => '',
+	'default-repeat'         => '',
+	'default-position-x'     => '',
+	'default-attachment'     => '',
+	'wp-head-callback'       => '_custom_background_cb',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => ''
+);
+add_theme_support( 'custom-background', $defaults );
 
 /**
  * add menus
@@ -93,6 +108,39 @@ create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the 
 
 
 add_theme_support( 'post-thumbnails' );
+
+/**
+ * Add Options Page ACF 
+ */
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+		acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Instagram Section Settings',
+		'menu_title'	=> 'Instagram Section',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+}
 
 function new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';

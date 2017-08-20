@@ -3,42 +3,53 @@
 }
 
 .instagram-feed {
-	margin-top: -5em;
+	margin-top: -82px;
 }
 
 .blog-content {
 	padding-left: 30px;
 	padding-right: 30px;
+	margin-top: -6em;
 	h5, p {
 		color: #fff;
 	}
 	a {
 		color: #4996BB;
 	}
+	img {
+		width: 30%;
+		height: 30%;
+	}
 }
 
 .section-five {
 	.row {
-		padding: 10px;
+		padding-top: 10px;
 		background-color: #373A3B;
 		img {
 			height: 75px;
 			width: 75px;
+			margin-left: 10px;
 		}
 		p {
 			color: #fff;
+			margin-left: 10px;
 		}
 	}
 }
 
+.section-five,
+.section-six,
 .section-seven {
-	box-shadow: 2px 3px 13px #000;
+	padding-top: 0px;
 }
 
 .section-seven .col-md-12 {
 	h1 {
 		text-align: center;
 		color: #fff;
+		font-weight: bold;
+		margin-top: 1.5em;
 	}
 }
 
@@ -50,6 +61,7 @@
 	}
 	h2 {
 		color: #fff;
+		font-weight: bold;
 	}
 }
 
@@ -62,38 +74,29 @@
 	}
 }
 
-@media (min-width: 768px) {
-	.container {
-		width: 100%;
-	}
-}
-
-@media ( max-width: 1005px ) {
-	.inner-wrapper {
-		height: 100%;
-		padding-top: 21px;
-	}
-	.section-six {
-		padding-top: 0px;
-	}
-	.tour-dates-title {
-		h1 {
-			margin-top: 0px;
-			padding-top: 10px;
-		}
-	}
-	.tour-date-titles, .col-md-4 {
-		display: inline-flex;
-		width: 100%;
+@media ( min-width: 320px ) {
+	.tour-date-titles {
 		h2 {
-		font-size: 25px;
+			font-size: 15px;
 		}
 	}
 	.tour-date-fields {
-		display: inline-flex;
-		width: 100%;
 		p {
-			font-size: 11px;
+			font-size: 8px;
 		}
 	}
 }
+
+@media ( min-width: 768px ) {
+		.tour-date-titles {
+		h2 {
+			font-size: 26px;
+		}
+	}
+	.tour-date-fields {
+		p {
+			font-size: 16px;
+		}
+	}
+}
+

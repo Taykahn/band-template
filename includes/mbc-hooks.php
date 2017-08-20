@@ -97,6 +97,7 @@ function mbc_numeric_posts_nav() {
 	echo '</ul></div>';
 
 }
+
 add_action( 'mbc_pagination', 'mbc_numeric_posts_nav' );
 
 

@@ -8,11 +8,13 @@
 
 			<?php foreach( $images as $image ): ?>
 
-				<div>
+				<div class="slide">
+
+					<?php the_field( 'band_title', 'option' ); ?>
 
 					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-				</div>
+				</div><!-- end slide -->
 
 			<?php endforeach; ?>
 

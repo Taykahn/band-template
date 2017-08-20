@@ -73,6 +73,9 @@
 .slick-arrow.slick-hidden {
   display: none; }
 
+html, body {
+  overflow-x: hidden; }
+
 body {
   min-width: 320px;
   font-family: 'Raleway', sans-serif;
@@ -82,7 +85,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 .parallax {
-  min-height: 1000px;
+  min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,6 +95,7 @@ body {
           background-size: cover; }
 
 .container {
+  padding-top: 110px;
   margin-left: 0px;
   margin-right: 0px;
   padding-left: 0px;
@@ -102,15 +106,9 @@ body {
   width: 100%;
   z-index: 1000; }
 
-.affix + .container-fluid {
-  padding-top: 70px; }
-
 #affix-navbar {
   height: 525px;
   margin-top: 20px; }
-
-.container {
-  padding-top: 110px; }
 
 .blog-navigation ul {
   display: -webkit-inline-box;
@@ -125,30 +123,24 @@ body {
   padding-left: 0px;
   padding-right: 0px; }
 
-.slick-slide img {
-  width: 100%; }
-
-.parallax {
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover; }
+@media (min-width: 768px) {
+  .container {
+    width: 100%; } }
 
 @media (min-width: 1200px) {
   .container {
     width: 100%; } }
 
-.contact-button {
-  text-align: center; }
+.btn-info {
+  margin-top: 15px; }
 
 .contact-form {
   max-width: 400px;
   width: 100%;
   padding-top: 0px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0 auto;
   position: relative; }
   .contact-form .error {
@@ -322,7 +314,7 @@ fieldset {
 .navbar-toggle,
 .navbar-toggle,
 .collapse {
-  margin-bottom: -50px; }
+  margin-bottom: -48px; }
 
 #navbar ul li a {
   color: #fff;
@@ -333,14 +325,18 @@ fieldset {
   color: #888; }
 
 /* Helper Classes ------------------------ */
-@media (max-width: 767px) {
+@media (min-width: 320px) {
+  .collapse {
+    margin-bottom: 0px;
+    text-align: center; }
+  #navbar ul li a {
+    padding-left: 0px; }
   .navbar
 .navbar-nav {
     display: block;
-    float: none;
-    margin-right: 0px;
-    margin-left: 0px;
-    text-align: center; }
+    float: none; }
+  .social-icons {
+    margin-left: 10px; }
   .sub-menu {
     display: none;
     position: absolute;
@@ -348,20 +344,85 @@ fieldset {
     padding: 10px 15px;
     width: 200px; }
   li:hover .sub-menu {
-    display: block; }
-  .logo h1 {
-    font-size: 35px;
-    margin-top: 8px;
-    margin-left: 10px; } }
+    display: block; } }
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: block;
+    float: right; }
+  #navbar ul li a {
+    padding-left: 30px; } }
+
+.slick-slide img {
+  width: 100%; }
+
+.slide {
+  position: relative; }
+  .slide h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 5em;
+    font-weight: bold; }
+
+@media (max-width: 768px) {
+  .slick-slide img {
+    width: 166%; } }
+
+@media (max-width: 414px) {
+  .slick-slide img {
+    width: 310%; } }
+
+@media (max-width: 375px) {
+  .slick-slide img {
+    width: 340%; } }
+
+@media (max-width: 360px) {
+  .slick-slide img {
+    width: 355%; } }
+
+@media (max-width: 320px) {
+  .slick-slide img {
+    width: 400%; } }
+
+@media (min-width: 768px) {
+  .slide h1 {
+    font-size: 6em;
+    margin-top: 2em; } }
 
 footer {
   background-color: #5E5D57;
-  padding: 2em; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
-.footer-h1 {
-  text-align: center;
+.contact-section {
+  padding-bottom: 30px; }
+
+.footer-h2 {
   padding-top: 5px;
   padding-bottom: 5px; }
+  .footer-h2 h2, .footer-h2 p {
+    text-align: center; }
+  .footer-h2 pre {
+    text-align: center;
+    display: block;
+    padding-top: 4em;
+    padding: 0px;
+    margin: 0px;
+    font-size: 13px;
+    line-height: 1.42857;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333333;
+    background-color: #5e5d57;
+    border: none; }
+  .footer-h2 ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0px; }
+    .footer-h2 ul a {
+      color: #F7F3EF; }
 
 .copyright p {
   text-align: center;
@@ -369,6 +430,16 @@ footer {
   font-size: 10px;
   color: #000;
   margin: 0px; }
+
+@media (min-width: 320px) {
+  .footer-h2 p {
+    padding-left: 15px;
+    padding-right: 15px; } }
+
+@media (min-width: 768px) {
+  .footer-h2 {
+    padding-left: 0px;
+    padding-right: 0px; } }
 
 .sidebar {
   background-color: #3F4441; }
@@ -385,33 +456,41 @@ footer {
   background-color: #676D70; }
 
 .instagram-feed {
-  margin-top: -5em; }
+  margin-top: -82px; }
 
 .blog-content {
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  margin-top: -6em; }
   .blog-content h5, .blog-content p {
     color: #fff; }
   .blog-content a {
     color: #4996BB; }
+  .blog-content img {
+    width: 30%;
+    height: 30%; }
 
 .section-five .row {
-  padding: 10px;
+  padding-top: 10px;
   background-color: #373A3B; }
   .section-five .row img {
     height: 75px;
-    width: 75px; }
+    width: 75px;
+    margin-left: 10px; }
   .section-five .row p {
-    color: #fff; }
+    color: #fff;
+    margin-left: 10px; }
 
+.section-five,
+.section-six,
 .section-seven {
-  -webkit-box-shadow: 2px 3px 13px #000;
-     -moz-box-shadow: 2px 3px 13px #000;
-          box-shadow: 2px 3px 13px #000; }
+  padding-top: 0px; }
 
 .section-seven .col-md-12 h1 {
   text-align: center;
-  color: #fff; }
+  color: #fff;
+  font-weight: bold;
+  margin-top: 1.5em; }
 
 .tour-date-titles {
   border-bottom: solid 2px; }
@@ -419,7 +498,8 @@ footer {
     font-size: 30px;
     font-weight: bold; }
   .tour-date-titles h2 {
-    color: #fff; }
+    color: #fff;
+    font-weight: bold; }
 
 .tour-date-fields .col-md-3 {
   margin-top: 10px; }
@@ -427,37 +507,20 @@ footer {
 .tour-date-fields p {
   color: #fff; }
 
-@media (min-width: 768px) {
-  .container {
-    width: 100%; } }
+@media (min-width: 320px) {
+  .tour-date-titles h2 {
+    font-size: 15px; }
+  .tour-date-fields p {
+    font-size: 8px; } }
 
-@media (max-width: 1005px) {
-  .inner-wrapper {
-    height: 100%;
-    padding-top: 21px; }
-  .section-six {
-    padding-top: 0px; }
-  .tour-dates-title h1 {
-    margin-top: 0px;
-    padding-top: 10px; }
-  .tour-date-titles, .col-md-4 {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -moz-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    width: 100%; }
-    .tour-date-titles h2, .col-md-4 h2 {
-      font-size: 25px; }
-  .tour-date-fields {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -moz-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    width: 100%; }
-    .tour-date-fields p {
-      font-size: 11px; } }
+@media (min-width: 768px) {
+  .tour-date-titles h2 {
+    font-size: 26px; }
+  .tour-date-fields p {
+    font-size: 16px; } }
+
+#affix-navbar .parallax {
+  background-attachment: scroll; }
 
 .about-content h2 {
   font-size: 40px;
@@ -466,6 +529,26 @@ footer {
 
 .about-content p {
   color: #fff;
-  font-size: 30px; }
+  font-size: 10px;
+  padding-left: 2em;
+  padding-right: 2em; }
+
+@media (min-width: 768px) {
+  .about-content p {
+    font-size: 20px; } }
+
+@media (min-width: 320px) {
+  .page-header h1 {
+    text-align: center; }
+  .single-page-content p {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .single-page-content img {
+    width: 100%; } }
+
+.sgl-bm-img img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px; }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,52 +1,52 @@
 <?php
 /**
- * Footer
+ * Template Name: Footer
  */
+
+
 ?>
 
 </main>
 
 	<footer>
 
-	<div class="three-column row no-pad">
+	<div class="three-column row max no-pad contact-section">
 
-		<div class="col-md-12">
+		<div class="col-sm-12 col-md-12">
 
 			<div class="row">
 
-				<div class="col-md-4">
+				<div class="col-sm-4 col-md-4">
 
-					<div class="footer-h1">
+					<div class="footer-h2 contact-section">
 
-						<h1>Contact</h1>
+						<h2><?php the_field( 'footer_title_1', 'option' ); ?></h2>
 
-					</div><!-- end footer-h1 -->
+						<p><?php the_field( 'footer_content_1', 'option' ); ?></p>
 
-					<div class="contact-button">
-
-						<a class="btn btn-info" href="http://localhost:3000/contant-us/" role="button">Contact Us</a>
-
-					</div><!-- end contact-button -->
+					</div><!-- end footer-h2 -->
 
 				</div><!-- end col-md-4 -->
 
-				<div class="col-md-4">
+				<div class="col-sm-4 col-md-4">
 
-					<div class="footer-h1">
+					<div class="footer-h2">
 
-						<h1>Management</h1>
+						<h2><?php the_field( 'footer_title_2', 'option' ); ?></h2>
 
+						<p><?php the_field( 'footer_content_2', 'option' ); ?></p>
 
-
-					</div><!-- end footer-h1 -->
+					</div><!-- end footer-h2 -->
 
 				</div><!-- end col-md-4 -->
 
-				<div class="col-md-4">
+				<div class="col-sm-4 col-md-4">
 
-					<div class="footer-h1">
+					<div class="footer-h2">
 
-						<h1>Somthing Here</h1>
+						<h2><?php the_field( 'footer_title_3', 'option' ); ?></h2>
+
+						<?php do_action( 'gs_related_info' ) ?>
 
 					</div><!-- end footer-h1 -->
 

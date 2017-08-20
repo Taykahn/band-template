@@ -89,7 +89,7 @@
 .navbar-toggle, 
 .navbar-toggle, 
 .collapse{
-	margin-bottom: -50px;
+	margin-bottom: -48px;
 }
 
 #navbar ul li a {
@@ -104,20 +104,23 @@
 
 
 /* Helper Classes ------------------------ */
-@media ( min-width: 768px ) {
 
-}
-
-@media (max-width:767px) {
+@media (min-width: 320px) {
+	.collapse {
+		margin-bottom: 0px;
+		text-align: center;
+	}
+	#navbar ul li a {
+		padding-left: 0px;
+	}
 	.navbar
 	.navbar-nav {
 		display:block;
 		float: none;
-		margin-right: 0px;
-		margin-left: 0px;
-		text-align: center;
 	}
-
+	.social-icons {
+		margin-left: 10px;
+	}
 	.sub-menu {
 		display: none;
 		position: absolute;
@@ -128,12 +131,15 @@
 	li:hover .sub-menu {
 		display: block;
 	}
-		.logo {
-		h1 {
-		font-size: 35px;
-		margin-top: 8px;
-		margin-left: 10px;
-		}
+}
+
+@media ( min-width: 768px ) {
+	.navbar .navbar-nav {
+		display:block;
+		float: right;
+	}
+	#navbar ul li a {
+		padding-left: 30px;
 	}
 }
 
