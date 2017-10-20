@@ -26,57 +26,27 @@ $tour_dates=new WP_Query( $args2 );
 
 ?>
 
-<section id="affix-navbar" class="section-one container-fluid">
+<section class="section-one container-fluid">
 
-	<div class="inner-wrapper container">
+	<div class="instagram-feed">
 
-		<div class="col-md-12">
+		<?php the_field( 'instagram_feed', 'option' ); ?>
 
-			<div class="row">
-
-				<div class="instagram-feed">
-
-					<?php the_field( 'instagram_feed', 'option' ); ?>
-
-				</div><!-- end instagram feed -->
-
-			</div><!-- end row -->
-
-		</div><!-- end col-md-12 -->
-
-		</div><!--.row-->
-
-	</div><!--.container-->
+	</div><!-- end instagram feed -->
 
 </section><!-- end section-one -->
 
-<section class="section-two container-fluid">
+<section class="section-two">
 
 	<div class="row">
 
-		<div class="parallax" style="background-image: url('<?php the_field( 'section_two_bg_img', $post_id ) ?>')">
-
-	</div><!-- end row -->
-
-</section><!-- end section-two -->
-
-<section class="section-three container-fluid">
-
-	<?php include ( 'template/archive-front_page.php' ); ?>
-
-</section><!-- end section-three -->
-
-<section id="section-four">
-
-	<div class="row">
-
-		<div class="parallax" style="background-image: url( '<?php the_field( 'section_four', $post_id ); ?>' )">
+		<div class="fp-parallax" style="background-image: url( '<?php the_field( 'section_two_bg_img', $post_id ); ?>' )">
 
 	</div><!-- end row -->
 
 </section><!-- end section-four -->
 
-<section class="container-fluid section-five">
+<section class="container-fluid section-three">
 
 	<div class="col-md-12">
 
@@ -94,29 +64,17 @@ $tour_dates=new WP_Query( $args2 );
 
 	</div><!-- end col-md-12 -->
 
-</section><!-- end section-five -->
+</section><!-- end section-three -->
 
-<section id="section-six">
+<section class="section-four">
 
-	<div class="container section-six">
+	<div class="fp-parallax" style="background-image: url( '<?php the_field( 'section_four_bg_img', $post_id ); ?>' )">
 
-		<div class="col-md-12">
+</section><!-- end section-four -->
 
-		<div class="row">
+<section class="section-five">
 
-			<div class="parallax" style="background-image: url( '<?php the_field( 'section_six', $post_id ); ?>' )">
-
-		</div><!-- end row -->
-
-		</div><!-- end col-md-12 -->
-
-	</div><!-- end container -->
-
-</section><!-- end section-six -->
-
-<section class="section-seven">
-
-	<a id="tour-dates-section"><div class="container section-seven"></a>
+	<a id="tour-dates-section"><div class="container"></a>
 
 		<div class="parallax" style="background-image: url( '<?php the_field( 'section_seven_tour_dates', $post_id ); ?>' )"/>
 
@@ -124,7 +82,7 @@ $tour_dates=new WP_Query( $args2 );
 
 			<div class="col-md-12 tour-dates-title" id="tour-dates">
 
-				<h1>Tour Dates</h1>
+				<h1>Upcoming Shows</h1>
 
 			</div><!-- end col-md-12 -->
 
@@ -148,7 +106,7 @@ $tour_dates=new WP_Query( $args2 );
 
 				</div><!-- end col-md-3 -->
 
-				<div class="col-xs-3 col-md-3">
+				<div class="col-xs-3 col-md-3 tickets">
 
 						<h2>Tickets</h2>
 

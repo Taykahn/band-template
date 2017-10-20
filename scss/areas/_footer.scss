@@ -1,20 +1,29 @@
-
-footer {
-	background-color: #5E5D57;
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-.contact-section {
-	padding-bottom: 30px;
+.ftr-banner {
+height: 100%;
 }
 
 .footer-h2 {
 	padding-top: 5px;
 	padding-bottom: 5px;
+	letter-spacing: 3px;
+
+	h2 {
+		color: $grey-wht;
+		border-bottom: double;
+		padding-bottom: 7px;
+		margin-left: 10px;
+		margin-right: 10px;
+		letter-spacing: 10px;
+	}
+
+	p {
+		color: $off-white;
+	}
+
 	h2, p {
 		text-align: center;
 	}
+
 	pre {
 		text-align: center;
 		display: block;
@@ -25,10 +34,11 @@ footer {
 		line-height: 1.42857;
 		word-break: break-all;
 		word-wrap: break-word;
-		color: #333333;
-		background-color: #5e5d57;
+		color: $dark-grey;
+		background-color: $light-grey;
 		border: none; 
 	}
+
 	ul {
 		list-style: none;
 		text-align: center;
@@ -39,13 +49,24 @@ footer {
 	}
 }
 
+.social-icons {
+	height: 44px;
+	display: inline-flex;
+	margin-left: 10px;
+
+	img {
+		margin-left: 5px;
+	}
+}
+
 .copyright {
 	p {
 		text-align: center;
 		font-weight: bold;
-		font-size: 10px;
-		color: #000;
+		font-size: 15px;
+		color: $black;
 		margin: 0px;
+		padding-bottom: 15px;
 	}
 }
 
@@ -53,6 +74,16 @@ footer {
 	.footer-h2 p {
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+
+	.ftr-sec-2 {
+		.col-sm-6 {
+			text-align: center;
+		}
+	}
+
+	.copyright {
+		padding-top: 2em;
 	}
 }
 

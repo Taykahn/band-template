@@ -3,20 +3,12 @@
  * Template Name: Conatact Page
  */
 
-get_header(); 
+get_header(); ?>
 
-global $post;
+<section class="form">
 
-$post_id = $post->ID;
+	<?php include( 'form/form.php' ); ?>
 
-?>
-
-	<div class="container">
-
-		<div class="parallax" style="background-image: url('<?php the_field( 'section_two_bg_img', $post_id ) ?>')">
-
-		<?php include( 'form/form.php' ); ?>
-
-	</div><!-- end container -->
+</section><!-- end form -->
 
 <?php get_footer(); ?>

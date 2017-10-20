@@ -12,8 +12,6 @@
 
 		<h3>Contact</h3>
 
-		<h4>Contact us today, and get reply with in 24 hours!</h4>
-
 		<fieldset>
 
 			<input placeholder="Your name" type="text" name="contact-name" value="<?= $name ?>" tabindex="1" autofocus>

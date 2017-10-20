@@ -3,71 +3,84 @@
  * Template Name: Footer
  */
 
-
 ?>
 
 </main>
 
-	<footer>
+<footer>
 
-	<div class="three-column row max no-pad contact-section">
+<div class="ftr-banner" style="background-image: url( '<?php the_field( 'footer_bkgd_img', 'option' ); ?>' )">
 
-		<div class="col-sm-12 col-md-12">
+	<section class="ftr-sec-1">
 
-			<div class="row">
+		<div class="three-column row max no-pad contact-section">
 
-				<div class="col-sm-4 col-md-4">
+			<div class="col-sm-12 col-md-12">
 
-					<div class="footer-h2 contact-section">
+				<div class="row">
 
-						<h2><?php the_field( 'footer_title_1', 'option' ); ?></h2>
+					<div class="col-sm-4 col-md-4">
 
-						<p><?php the_field( 'footer_content_1', 'option' ); ?></p>
+						<div class="footer-h2 contact-section">
 
-					</div><!-- end footer-h2 -->
+							<h2><?php the_field( 'footer_title_1', 'option' ); ?></h2>
 
-				</div><!-- end col-md-4 -->
+							<p><?php the_field( 'footer_content_1', 'option' ); ?></p>
 
-				<div class="col-sm-4 col-md-4">
+						</div><!-- end footer-h2 -->
 
-					<div class="footer-h2">
+					</div><!-- end col-md-4 -->
 
-						<h2><?php the_field( 'footer_title_2', 'option' ); ?></h2>
+					<div class="col-sm-4 col-md-4">
 
-						<p><?php the_field( 'footer_content_2', 'option' ); ?></p>
+						<div class="footer-h2">
 
-					</div><!-- end footer-h2 -->
+							<h2><?php the_field( 'footer_title_2', 'option' ); ?></h2>
 
-				</div><!-- end col-md-4 -->
+							<p><?php the_field( 'footer_content_2', 'option' ); ?></p>
 
-				<div class="col-sm-4 col-md-4">
+						</div><!-- end footer-h2 -->
 
-					<div class="footer-h2">
+					</div><!-- end col-md-4 -->
 
-						<h2><?php the_field( 'footer_title_3', 'option' ); ?></h2>
+					<div class="col-sm-4 col-md-4">
 
-						<?php do_action( 'gs_related_info' ) ?>
+						<div class="footer-h2">
 
-					</div><!-- end footer-h1 -->
+							<h2><?php the_field( 'footer_title_3', 'option' ); ?></h2>
 
-				</div><!-- end col-md-4 -->
+							<?php do_action( 'gs_related_info' ) ?>
 
-			</div><!-- end row -->
+						</div><!-- end footer-h1 -->
 
-		</div><!-- end col-md-12 -->
+					</div><!-- end col-md-4 -->
 
-	</div><!-- end two-column row no-pad -->
+				</div><!-- end row -->
 
-	<div class="copyright">
+			</div><!-- end col-md-12 -->
 
-		<p>&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
+		</div><!-- end two-column row no-pad -->
 
-	</div><!-- end copyright -->
+	</section><!-- end ftr-sec-1 -->
 
-	</footer>
+	<section class="ftr-sec-2">
 
-		<?php wp_footer(); ?>
+		<div class="row">
 
-	</body>
+			<div class="copyright">
+
+				<p>&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
+
+			</div><!-- end copyright -->
+
+		</div><!-- end row -->
+
+	</section><!-- end ftr-sec-2 -->
+
+</footer>
+
+	<?php wp_footer(); ?>
+
+</body>
 
 </html>

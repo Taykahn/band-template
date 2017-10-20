@@ -2,7 +2,6 @@
 /**
  * Template Name: Archives Frontpage
  */
-
 if ( get_query_var( 'paged' ) ) { 
 	$paged = get_query_var( 'paged' ); 
 }
@@ -12,16 +11,12 @@ elseif ( get_query_var( 'page' ) ) {
 else { 
 	$paged = 1; 
 }
-
-query_posts('posts_per_page=3&paged=' . $paged); 
-
-
+query_posts('posts_per_page=&paged=' . $paged); 
 $query = array( 
 	'post_type' => 'post',
 	'paged'     => $paged
 );
 $blog = new WP_Query( $query );
-
 ?>
 
 	<div class="inner-wrapper container">

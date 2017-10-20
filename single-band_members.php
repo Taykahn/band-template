@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-	<div class="container">
+	<div class="container single-bd-mem-cont">
 
 		<div class="row">
 

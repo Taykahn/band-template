@@ -1,3 +1,16 @@
 .btn-info {
 	margin-top: 15px;
 }
+
+.btn-sm, .btn-group-sm > .btn {
+	font-size: 6px;
+
+	@media ( min-width: 414px ) {
+		margin-left: 10px;
+	}
+
+	@media ( min-width: 768px ) {
+		font-size: 12px;
+		margin-left: 3em;
+	}
+}

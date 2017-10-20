@@ -1,6 +1,8 @@
 <?php
 /**
 * Template Name: Header
+*
+* Header Image hooks @includes 
 */
 ?>
 
@@ -21,10 +23,6 @@
 
 	</title>
 
-	<!-- Google Fonts -->
-
-	<link href="https://fonts.googleapis.com/css?family=Raleway|Open+Sans" rel="stylesheet">
-
 	<?php wp_head() ?>
 
 	<?php 
@@ -42,70 +40,24 @@
 
 	<header>
 
-	<div class="container-fluid no pad">
+		<div id="navbar-sm">
 
-		<div class="col-md-12">
+			<?php include( 'partials/navbar-sm.php' ); ?> 
 
-			<div class="images row">
+		</div><!-- end navbar-sm -->
 
-				<?php include( 'template/slick.php' ); ?>
-
-			</div><!-- end row -->
-
-		</div><!-- end col-md-12 -->
-
-	</div><!-- end container-fluid -->
+		<?php do_action( 'hero' ); ?>
 
 	</header>
 
-	<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="533">
+	<div id="navbar-lg">
 
-		<div class="navbar-header">
+		<?php include( 'partials/navbar-lg.php' ); ?> 
 
-			<div class="col-xs-6">
+	</div><!-- end navbar-lg -->
 
-				<div class="row">
 
-				<div class="social-icons">
 
-					<h3><?php the_field( 'twitter_icon', 'option' ); ?></h3>
-
-					<h3><?php the_field( 'facebook_icon', 'option' ); ?></h3>
-
-				</div><!-- end social-icons -->
-
-			</div><!-- end row -->
-
-		</div><!-- end col-xs-6 -->
-
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-
-			<span class="sr-only">Toggle navigation</span>
-
-			<span class="icon-bar"></span>
-
-			<span class="icon-bar"></span>
-
-			<span class="icon-bar"></span>
-
-		</button><!-- end navbar-toggle collapsed -->
-
-		</div><!-- end navbar-header -->
-
-		<div id="navbar" class="navbar-collapse collapse">
-
-			<?php 
-				$args = array(
-				'menu'          => 'header-menu',
-				'menu_class'    => 'nav navbar-nav',
-				'container'     => 'false'
-			);
-				wp_nav_menu( $args );
-			?>
-
-		</div><!--/.navbar-collapse -->
-
-	</nav><!-- end navbar navbar-inverse navbar-fixed-top -->
 
 
 
